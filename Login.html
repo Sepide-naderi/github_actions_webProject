@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="Login.css">
+    </head>
+    <body>
+        <div class="form">
+      <p>Login</p> 
+        <form>
+            <input type="text" name="username" placeholder="username" >
+            <input type="text" style="-webkit-text-security: circle" name="password" placeholder="password" >
+            <button type="submit" formaction="index.html" value="Login" onclick="myFunc()">Login</button>
+            <p class="message">Not Registered?<a href="#">Create an account</a></p>
+        </form>
+            </div>
+        
+        <script>
+            function myFunc(){
+                var un = document.forms["myform"]["unname"].value;
+                var pw = document.forms["myform"]["pass"].value;
+                if (un == "admin" && pw=="admin"){
+                    window.location.href="index.html";
+                }
+            }
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,241 @@
+#main{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background:rgba(160,82,45,0.7);
+    z-index: 99999;
+}
+.center{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.ring{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  animation: ring 2s linear infinite;
+}
+@keyframes ring {
+  0%{
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #e65c00;
+  }
+    25%{
+    transform: rotate(90deg);
+    box-shadow: 1px 5px 2px purple;
+    }
+  50%{
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #18b201;
+  }
+    75%{
+    transform: rotate(270deg);
+    box-shadow: 1px 5px 2px pink;
+    }
+  100%{
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #0456c8;
+  }
+}
+.ring:before{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255,255,255,.3);
+}
+span{
+  color: #5C4033;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 200px;
+  animation: text 3s ease-in-out infinite;
+}
+@keyframes text {
+  50%{
+    color: #967969;
+  }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    background: rgba(255,255,255,0.5);
+    height: 40px;
+    border-radius: 10px;
+    animation: anim_nav linear 1s 1;
+}
+ul{
+    width: 100%;
+}
+ul li{
+    width: 20%;
+    float: left;
+    line-height: 40px;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    transition: 1s;
+    font-size: 20px;
+    border-radius: 10px;   
+}
+ul li:hover{
+    background: #561b04;
+    color: white;
+}
+#search-box{
+	position: absolute;
+    top: 0;
+	padding-left:5%;
+}
+form {
+  background: rgba(255,255,255,0.5);
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  animation: anim_nav linear 1s 1;
+}
+input {
+  all: unset;
+  font: 16px;
+  color: black;
+  height: 100%;
+  width: 85%;
+  float:left;
+  border-right:2px solid #474747;
+  transition: 1s;
+}
+input:hover{
+	background: rgba(255,255,255,0.5);
+}
+::placeholder {
+  color: black;
+  opacity: 0.7;
+}
+button {
+  all: unset;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-image:url(search.png);
+  animation: anim_button linear 1s infinite;
+}
+section{
+    position: relative;
+    top: 100px;
+    width: 100%;
+}
+.welcome{
+    width: 600px;
+    height: 200px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 2em;
+    animation: 2s linear 1 anim_welcome;
+    display: inline-block;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+}
+.imgs{
+    width: 100%;
+}
+.imgs img {
+    width: 30%;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.imgs img:hover{
+    transform: scale(1.1);
+}
+.coffee{
+    width: 300px;
+    height: 500px;
+    background: rgba(255,255,255,0.5);
+    float:right;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 2.5em;
+}
+.coffee div{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.coffee img {
+    width: 100px;
+    border-radius: 10px;
+}
+.coffee img:hover {
+    transform: scale(1.1);
+
+}
+@keyframes anim_nav{
+    0%{margin-top: -100px; opacity: 0; }
+    100%{margin-top: 0px; opacity: 1; }
+}
+@keyframes anim_button{
+	0%{transform:rotate(0); }
+	25%{transform:rotate(45deg); }
+    50%{transform:rotate(0); }
+	75%{transform:rotate(-45deg); }
+	100%{transform:rotate(0); }
+}
+@keyframes anim_welcome{
+     0%{margin-top: 100px; opacity: 0; }
+    100%{margin-top: 0px; opacity: 1; }
+}
+footer{
+    width: 20%;
+	height: 40px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 10px;
+    animation: anim_footer linear 1s 1;
+	position:absolute;
+    bottom:0;
+    left: 0;
+}
+#footer-ul{
+    width: 100%;
+}
+.im-footer{
+	height:25px;
+}
+#footer-ul .li-f{
+    width: 20%;
+    float: left;
+    line-height: 40px;
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 10px; 
+}
+.li-f:hover{
+	background: rgba(255,255,255,0.5);
+}
+@keyframes anim_footer{
+    0%{margin-left: -100px; opacity: 0; }
+    100%{margin-left: 0px; opacity: 1; }
+}
